@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick's Advice</title>
+</head>
+<style>
+  body{
+    background-color: lightblue;
+  }
+</style>
+<style>
+.menu,.submenu{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.menu{
+  margin:50px auto;
+  width:800px;
+/* width:fit-content; */
+}
+.menu > li{
+  background:#34495e;
+  float:left;
+  position:relative;
+  transform:skewX(25deg);
+}
+.menu a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:Arial, Helvetica;
+  font-size:14px;
+}
+.menu li:hover{
+  background:#e74c3c;
+}
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+.submenu{
+  position:absolute;
+  width:200px;
+  left:50%;
+  margin-left:-100px;
+  transform:skewX(-25deg);
+  transform-origin:left top;
+}
+.submenu li{
+  background:#34495e;
+  position:relative;
+  overflow:hidden;
+}
+.submenu > li > a {
+  padding: 1em 2em;     
+}
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;      
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);     
+}
+/* odd stuff */
+.submenu > li:nth-child(odd){
+  transform:skewX(-25deg) translateX(0);
+}
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}
+/* even stuff */
+.submenu > li:nth-child(even){
+  transform:skewX(25deg) translateX(0);
+}
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+.submenu > li:nth-child(even)::after{
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+.submenu,.submenu li{
+  opacity:0;
+  visibility: hidden;
+}
+.submenu li{
+  transition:all 0.2s ease-out;
+}
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li{
+  opacity:1;
+  visibility:visible;
+}
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px); 
+}
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);     
+}
+/* clearfix */
+.clearfix:before,
+.clearfix:after{
+  content:"";
+  display:table;
+}
+.clearfix:after{
+  clear:both;
+}
+.clearfix{
+  *zoom: 1;
+}
+    
+    </style>
+<style>
+  .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        padding: 20px;
+  }
+  .Item1{
+        grid-column: 1/2;
+        text-align: center;
+    }
+  .Item2{
+        grid-column: 2/2;
+    }
+  .Item3{
+        grid-column: 1/2;
+    }
+  .left{
+      width: 40%;
+      float: left;
+      font-size: 24px;
+      color: blueviolet;
+      background-color: white;
+      margin-right: 20px;
+      padding: 10px;
+      box-shadow: 5px 5px 12px black;
+      justify-content: space-between;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      border: solid;
+  }
+  .left2{
+      width: 40%;
+      float: left;
+      font-size: 24px;
+      color: blueviolet;
+      background-color: white;
+      margin-right: 20px;
+      padding: 10px;
+      box-shadow: 5px 5px 12px black;
+      justify-content: space-between;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      border: solid;
+  }
+  </style>
+<style> 
+  .gallery{
+        background-color: blueviolet;
+        border: 4px solid blueviolet;
+        width: 42%;
+        box-shadow: blueviolet 5px 1px 5px;
+        border-radius: 8px;
+        margin: 2px;
+    }
+    img{
+        border-radius: 5px 5px 5px 5px;
+        float: center;
+        margin: 1px;
+        width: 100%;
+
+    }
+
+
+</style>
+    
+<body>
+    <ul class="menu clearfix">
+        <li><a href="">home</a> <link href="dropdownmenu.html"></li>
+        <li>
+          <a href="5 star artifacts.html">artifact sets</a>
+          <ul class="submenu">
+            <li><a href="5 star artifacts.html">5 star artifacts</a></li>
+            <li><a href="">4 star artifacts</a></li>
+            <li><a href="">3 star artifacts</a></li>
+            <li><a href="">2 star artifacts</a></li>
+          </ul>
+        </li>
+        <li><a href="weapon tab genshin.html"> weapons</a></li>
+        <li><a href="characters.html"> characters</a></li>
+        <li><a href=""> events</a></li>     
+        <li>
+          <a href="about me.html"> About </a></li>
+    </ul>
+    
+       </body>
+<body> 
+  <h1 style="padding: 10px; font-size: 75px; color: blueviolet; border: solid; border-color: blueviolet; background-color: white;">Home Page</h1>
+  <div class=".grid">
+  <div class="left"><div class="item1">
+  This website is to help genshin players learn things in the game and know what to do instead of making simple errors when beginning the game.
+  <p></p>
+Some things that you will find in this website is different artifacts in the game that make your characters stronger. Weapons and different team compositions that work with your main character.
+</div></div></div>
+
+<div class="left2"><div class="item2">
+More experienced players can also use this website to look up things like artifacts, weapons, team comps, and constilations of characters.😄
+<p></p>
+<div class="gallery">
+  <img src="image/qiqi on the meds.jpg">
+</div></div></div>
+</body>
+</html>
