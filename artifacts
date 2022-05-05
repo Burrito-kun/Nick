@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicks advice</title>
+</head>
+<style> 
+body{
+    background-color: violet;
+
+}
+ </style>
+<style>
+    .menu,.submenu{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .menu{
+      margin:50px auto;
+      width:800px;
+    /* width:fit-content; */
+    }
+    .menu > li{
+      background:#34495e;
+      float:left;
+      position:relative;
+      transform:skewX(25deg);
+    }
+    .menu a{
+      display:block;
+      color:#fff;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-family:Arial, Helvetica;
+      font-size:14px;
+    }
+    .menu li:hover{
+      background:#e74c3c;
+    }
+    .menu > li > a {
+      transform: skewX(-25deg);
+      padding: 1em 2em;
+    }
+    .submenu{
+      position:absolute;
+      width:200px;
+      left:50%;
+      margin-left:-100px;
+      transform:skewX(-25deg);
+      transform-origin:left top;
+    }
+    .submenu li{
+      background:#34495e;
+      position:relative;
+      overflow:hidden;
+    }
+    .submenu > li > a {
+      padding: 1em 2em;     
+    }
+    .submenu > li::after {
+      content: '';
+      position: absolute;
+      top: -125%;
+      height: 100%;
+      width: 100%;      
+      box-shadow: 0 0 50px rgba(0, 0, 0, .9);     
+    }
+    /* odd stuff */
+    .submenu > li:nth-child(odd){
+      transform:skewX(-25deg) translateX(0);
+    }
+    .submenu > li:nth-child(odd) > a {
+      transform: skewX(25deg);
+    }
+    .submenu > li:nth-child(odd)::after {
+      right: -50%;
+      transform: skewX(-25deg) rotate(3deg);
+    }
+    /* even stuff */
+    .submenu > li:nth-child(even){
+      transform:skewX(25deg) translateX(0);
+    }
+    .submenu > li:nth-child(even) > a {
+      transform: skewX(-25deg);
+    }
+    .submenu > li:nth-child(even)::after{
+      left: -50%;
+      transform: skewX(25deg) rotate(3deg);
+    }
+    .submenu,.submenu li{
+      opacity:0;
+      visibility: hidden;
+    }
+    .submenu li{
+      transition:all 0.2s ease-out;
+    }
+    .menu > li:hover .submenu,
+    .menu > li:hover .submenu li{
+      opacity:1;
+      visibility:visible;
+    }
+    .menu > li:hover .submenu li:nth-child(odd){
+      transform: skewX(-25deg) translateX(-15px); 
+    }
+    .menu > li:hover .submenu li:nth-child(even){
+      transform: skewX(25deg) translateX(15px);     
+    }
+    /* clearfix */
+    .clearfix:before,
+    .clearfix:after{
+      content:"";
+      display:table;
+    }
+    .clearfix:after{
+      clear:both;
+    }
+    .clearfix{
+      *zoom: 1;
+    }
+        
+        </style>
+<style>
+      .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        padding: 20px;
+  }
+  .Item1{
+        grid-column: 1/2;
+        text-align: center;
+    }
+  .Item2{
+        grid-column: 2/2;
+    }
+  .Item3{
+        grid-column: 1/2;
+    }
+    .left{
+        width: 50%;
+        float: left;
+        font-size: 24px;
+        color: black;
+        background-color: gold;
+        margin-right: 15px;
+        padding: 10px;
+        box-shadow: 5px 5px 12px black;
+        justify-content: space-between;
+        border: solid;
+    }
+    .left2{
+      width: 20%;
+      float: left;
+      font-size: 20px;
+      color: black;
+      background-color: gold;
+      margin-right: 15px;
+      padding: 10px;
+      box-shadow: 5px 5px 12px black;
+      justify-content: space-around;
+      border: solid;
+  }
+    </style>
+<style> 
+  .gallery{
+        background-color: blueviolet;
+        border: 4px solid rgb(118, 75, 158);
+        width: 90%;
+        box-shadow: rgb(145, 71, 214) 5px 1px 5px;
+        border-radius: 10px;
+        float: center;
+        margin: 1px;
+    }
+    img{
+        border-radius: 5px 5px 5px 5px;
+        float: center;
+        margin: 3px;
+        width: 98%;
+    }
+
+
+</style>
+<body>
+    <ul class="menu clearfix">
+        <li><a href="dropdownmenu.html">home</a></li>
+        <li>
+          <a href="5 star artifacts.html">artifact sets</a>
+          <ul class="submenu">
+            <li><a href="5 star artifacts.html">5 star artifacts</a></li>
+            <li><a href="">4 star artifacts</a></li>
+            <li><a href="">3 star artifacts</a></li>
+            <li><a href="">2 star artifacts</a></li>
+          </ul>
+        </li>
+        <li><a href="weapon tab genshin.html"> weapons</a></li>
+        <li><a href="characters.html"> characters</a></li>
+        <li><a href=""> events</a></li>     
+        <li>
+          <a href=""> About </a></li>
+    </ul>
+    
+       </body>
+<body>
+    <body> 
+        <h1 style="padding: 10px; font-size: 75px; color: black;border: solid;background-color: gold;">5 Star Artifacts</h1>
+        <div class="left"><div class="item1">
+       This is the Thundering fury set. Usually used for characters with the electro element. You can put this artifact set on characters that dont have the electro element. Mainly for the 4pc effect, characters of the pyro, hydro, and cryo element can benefit from this set because it will shorten cool down if you ctreate a elemental reaction.
+        <p></p>
+      </div></div>
+      
+      <div class="left2"><div class="item1">
+        Thundring Fury aritfact set: <p></p>
+        Flower of Life: Thunderbird's Mercy
+      <p></p>
+      <div class="gallery">
+        <img src="image/Thundering-Fury-Artifact.jpg">
+        <p></p>
+        2-piece set: Electro DMG bonus +15%<p></p>
+        4-piece set: Increases damage caused by Overloaded, Electro-Charged and Superconduct by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s.
+      </div></div></div>
+      <div class="left"><div class="item2"></div>
+        This is the Thunder Soother set. set was made for electro characters but as long as the enemy has the electro element on them it can work on anyone. characters like beidou and keqing benefit the most from this set.
+      </div></div>
+
+      <div class="left2"><div class="item2">
+        Thundersoother artifact set:
+        <p></p>
+        Flower of life: Thundersoother's Heart
+        <p></p>
+        <div class="gallery">
+          <img src="image/Thundersoother-Artifact-Guide-Genshin-Impact.jpg">
+          <p></p>
+          2-piece set: Electro RES increased by 40%.<p></p>
+          4-piece set: Increases DMG against opponents affected by Electro by 35%.
+        </div></div></div>
+    </body>
+</body>
+</html>
