@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicks advice</title>
+</head>
+<style> 
+    body{
+        background-color: rgb(201, 105, 105);
+    
+    }
+     </style>
+    <style>
+        .menu,.submenu{
+          margin:0;
+          padding:0;
+          list-style:none;
+        }
+        .menu{
+          margin:50px auto;
+          width:800px;
+        /* width:fit-content; */
+        }
+        .menu > li{
+          background:#34495e;
+          float:left;
+          position:relative;
+          transform:skewX(25deg);
+        }
+        .menu a{
+          display:block;
+          color:#fff;
+          text-decoration:none;
+          text-transform:uppercase;
+          font-family:Arial, Helvetica;
+          font-size:14px;
+        }
+        .menu li:hover{
+          background:#e74c3c;
+        }
+        .menu > li > a {
+          transform: skewX(-25deg);
+          padding: 1em 2em;
+        }
+        .submenu{
+          position:absolute;
+          width:200px;
+          left:50%;
+          margin-left:-100px;
+          transform:skewX(-25deg);
+          transform-origin:left top;
+        }
+        .submenu li{
+          background:#34495e;
+          position:relative;
+          overflow:hidden;
+        }
+        .submenu > li > a {
+          padding: 1em 2em;     
+        }
+        .submenu > li::after {
+          content: '';
+          position: absolute;
+          top: -125%;
+          height: 100%;
+          width: 100%;      
+          box-shadow: 0 0 50px rgba(0, 0, 0, .9);     
+        }
+        /* odd stuff */
+        .submenu > li:nth-child(odd){
+          transform:skewX(-25deg) translateX(0);
+        }
+        .submenu > li:nth-child(odd) > a {
+          transform: skewX(25deg);
+        }
+        .submenu > li:nth-child(odd)::after {
+          right: -50%;
+          transform: skewX(-25deg) rotate(3deg);
+        }
+        /* even stuff */
+        .submenu > li:nth-child(even){
+          transform:skewX(25deg) translateX(0);
+        }
+        .submenu > li:nth-child(even) > a {
+          transform: skewX(-25deg);
+        }
+        .submenu > li:nth-child(even)::after{
+          left: -50%;
+          transform: skewX(25deg) rotate(3deg);
+        }
+        .submenu,.submenu li{
+          opacity:0;
+          visibility: hidden;
+        }
+        .submenu li{
+          transition:all 0.2s ease-out;
+        }
+        .menu > li:hover .submenu,
+        .menu > li:hover .submenu li{
+          opacity:1;
+          visibility:visible;
+        }
+        .menu > li:hover .submenu li:nth-child(odd){
+          transform: skewX(-25deg) translateX(-15px); 
+        }
+        .menu > li:hover .submenu li:nth-child(even){
+          transform: skewX(25deg) translateX(15px);     
+        }
+        /* clearfix */
+        .clearfix:before,
+        .clearfix:after{
+          content:"";
+          display:table;
+        }
+        .clearfix:after{
+          clear:both;
+        }
+        .clearfix{
+          *zoom: 1;
+        }
+            
+            </style>
+    <style>
+          .grid{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+            padding: 20px;
+      }
+      .Item1{
+            grid-column: 1/2;
+            text-align: center;
+        }
+      .Item2{
+            grid-column: 2/2;
+        }
+      .Item3{
+            grid-column: 1/2;
+        }
+        .left{
+            width: 50%;
+            float: left;
+            font-size: 24px;
+            color: black;
+            background-color: lightblue;
+            margin-right: 15px;
+            padding: 10px;
+            box-shadow: 5px 5px 12px black;
+            justify-content: space-between;
+            border: solid;
+        }
+        .left2{
+          width: 20%;
+          float: left;
+          font-size: 20px;
+          color: black;
+          background-color: lightblue;
+          margin-right: 15px;
+          padding: 10px;
+          box-shadow: 5px 5px 12px black;
+          justify-content: space-around;
+          border: solid;
+      }
+        </style>
+    <style> 
+      .gallery{
+            background-color: bisque;
+            border: 4px solid bisque;
+            width: 90%;
+            box-shadow: bisque;
+            border-radius: 10px;
+            float: center;
+            margin: 1px;
+        }
+        img{
+            border-radius: 5px 5px 5px 5px;
+            float: center;
+            margin: 3px;
+            width: 98%;
+        }
+    
+    
+    </style>
+    <body>
+        <ul class="menu clearfix">
+            <li><a href="dropdownmenu.html">home</a></li>
+            <li>
+              <a href="5 star artifacts.html">artifact sets</a>
+              <ul class="submenu">
+                <li><a href="5 star artifacts.html">5 star artifacts</a></li>
+                <li><a href="">4 star artifacts</a></li>
+                <li><a href="">3 star artifacts</a></li>
+                <li><a href="">2 star artifacts</a></li>
+              </ul>
+            </li>
+            <li><a href="weapon tab genshin.html"> weapons</a></li>
+            <li><a href="characters.html"> characters</a></li>
+            <li><a href=""> events</a></li>     
+            <li>
+              <a href="about me.html"> About </a></li>
+        </ul>
+        
+           </body>
+<body>
+  <body> 
+    <h1 style="padding: 10px; font-size: 75px; color: black; border: solid; border-color: black; background-color: lightblue;">5 star Weapons</h1>
+    <div class="left"><div class="item1">
+   This is the wolf's grave stone. It is a claymore and its good because it gives the character equipping the weapon lots of atk%. The base atk of the weapon is high and has atk% as the secondary stat. The passive gives you and your party even more attack so its just a good weapon for your active character and your team. This weapon also works on any claymore character so you can put it on anyone. 
+    <p></p>
+  </div></div>
+  
+  <div class="left2"><div class="item1">
+    Wolf's Gravestone <p></p>
+  <p></p>
+  <div class="gallery">
+    <img src="image/wolfs gravestone.jpg">
+    <p></p>
+    Base stats<p></p>
+   Base atk: (lvl 1-90) 46-608<p></p>
+   2nd stat: atk% (lvl 1-90) 10.8%-49.6%<p></p>
+   Passive: <b>Wolfish Tracker:</b> Increases ATK by <b>20%.</b> On hit, attacks against opponents with less than 30% HP increase all party members' ATK by <b>40%</b> for 12s. Can only occur once every 30s.<p></p> The stats go up every refinement(everytime u get a duplicate of the weapon the stats go up if you fuse the weapon together)
+  </div></div></div>
+  <div class="left"><div class="item2"></div>
+    This is the unforged. The unforged is really good under 1 condition, having a sheild. If you have a sheild on the character using this weapon will have a really big attack boost. But if you dont have a sheild the weapon can still be good but its not as great when u have a sheild. This is also a claymore weapon so any character that uses claymore's can use this weapon and be good if sheilded.
+  </div></div>
+
+  <div class="left2"><div class="item2">
+    The Unforged
+    <p></p>
+    <div class="gallery">
+      <img src="image/unforged.jpg">
+      <p></p>
+      Base Stats<p></p>
+      Base atk: (lvl 1-90) 46-608<p></p>
+      2nd stat: atk% (lvl 1-90) 10.8%-49.6%<p></p>
+      Passive: <b>Golden Majesty:</b> Increases Shield Strength by <b>20%.</b> Scoring hits on opponents increases ATK by <b>4%</b> for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.<p></p> The stats go up every refinement(everytime u get a duplicate of the weapon the stats go up if you fuse the weapon together)
+    </div></div></div>
+</body>
+    
+</body>
+</html>
+    
+
